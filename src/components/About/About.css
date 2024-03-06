@@ -1,0 +1,14 @@
+.about {
+  background-color: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 60px 0;
+}
+
+.about__text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}

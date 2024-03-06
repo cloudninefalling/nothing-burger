@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+:root {
+  --text: #140b0d;
+  --background: #fbf9f9;
+  --primary: #572e3b;
+  --secondary: #c5aa91;
+  --accent: #9a8651;
+  background-color: var(--background);
+  color: var(--text);
+}

@@ -1,0 +1,9 @@
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  gap: 16px;
+  padding: 30px 60px;
+  background-color: var(--primary);
+  border-bottom: 2px solid var(--accent);
+}
