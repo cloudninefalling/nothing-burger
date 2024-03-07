@@ -8,12 +8,28 @@ html {
   font-family: sans-serif;
 }
 
+body {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 :root {
-  --text: #140b0d;
-  --background: #fbf9f9;
-  --primary: #572e3b;
-  --secondary: #c5aa91;
-  --accent: #9a8651;
+  --text: #572e3b;
+  --background: #c5aa91;
+  --primary: #d34276;
+  --complimentary: #e5b890;
+  --accent: rgb(214, 146, 112);
   background-color: var(--background);
   color: var(--text);
+}
+
+#root {
+  max-width: 1366px;
+}
+
+::selection {
+  background-color: rgba(168, 114, 87, 0.4);
 }

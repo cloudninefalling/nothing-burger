@@ -3,7 +3,13 @@
   box-sizing: border-box;
   display: flex;
   gap: 16px;
-  padding: 30px 60px;
-  background-color: var(--primary);
-  border-bottom: 2px solid var(--accent);
+  padding: 12px 60px;
+  background-color: var(--text);
+  border-bottom: 2px solid var(--complimentary);
+}
+
+.header__logo {
+  width: 48px;
+  aspect-ratio: 1/1;
+  background-color: var(--accent);
 }
