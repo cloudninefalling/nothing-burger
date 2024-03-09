@@ -1,28 +1,20 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-type TCurrentUser = {
-  username: string, 
-  id?: number, 
-  password: string,
-}
-
 type TState = {
-  currentUser: TCurrentUser
+  currentUser: TUser
 }
 
-const initialState: TCurrentUser = {
-  username: "initial",
-  password: "initial",
+const initialState: TUser = {
+  username: "",
+  password: "",
   id: -1,
 }
-
-//todo delete initial from initState
 
 export const currentUserSlice = createSlice({
   name: "currentUser",
   initialState,
   reducers: {
-    setCurrentUser: (state, action: PayloadAction<TCurrentUser>) => {
+    setCurrentUser: (state, action: PayloadAction<TUser>) => {
       state.username = action.payload.username;
       state.password = action.payload.password;
       state.id = Date.now();
