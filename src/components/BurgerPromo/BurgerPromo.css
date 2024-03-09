@@ -16,7 +16,7 @@
 .burger-promo__text_big {
   font-size: 6rem;
   font-style: italic;
-  background: linear-gradient(120deg, var(--primary), var(--accent));
+  background: linear-gradient(120deg, var(--primary), var(--accent) 80%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

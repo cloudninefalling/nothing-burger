@@ -22,6 +22,7 @@ body {
   --primary: #d34276;
   --complimentary: #e5b890;
   --accent: rgb(214, 146, 112);
+  --error: rgb(172, 9, 9);
   background-color: var(--background);
   color: var(--text);
 }
@@ -32,4 +33,10 @@ body {
 
 ::selection {
   background-color: rgba(168, 114, 87, 0.4);
+}
+
+:focus {
+  outline: 2px solid var(--complimentary);
+  outline-offset: 4px;
+  border-radius: 10px;
 }

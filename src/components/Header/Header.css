@@ -5,7 +5,11 @@
   gap: 16px;
   padding: 12px 60px;
   background-color: var(--text);
-  border-bottom: 2px solid var(--complimentary);
+  color: var(--background);
+  border-bottom: 1px solid var(--complimentary);
+  position: fixed;
+  max-width: 1366px;
+  z-index: 100;
 }
 
 .header__logo {

@@ -23,11 +23,12 @@
 .about__text_accent {
   width: min-content;
   transform: rotate(-12deg);
-  margin: 36px auto;
+  margin: 24px auto;
   letter-spacing: 0.3rem;
   font-size: 4rem;
+  font-weight: 600;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   text-transform: uppercase;
   font-style: italic;
   -webkit-text-stroke-color: var(--accent);
