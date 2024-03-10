@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Landing from "./pages/Landing/Landing";
 import Footer from "./components/Footer/Footer";
+import BuildABurger from "./pages/BuildABurger/BuildABurger";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/build-a-burger" element={<BuildABurger />} />
         </Routes>
       </main>
       <Footer />
