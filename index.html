@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="font-sans">
   <head>
     <meta charset="UTF-8" />
     <link
@@ -9,9 +9,13 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nothing Burger!</title>
+    <link href="./src/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <div id="root"></div>
+  <body class="flex bg-color-background text-color-text">
+    <div
+      id="root"
+      class="m-auto flex min-h-screen w-screen max-w-[1366px] flex-col items-center"
+    ></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
