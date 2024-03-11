@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main>
+      <main className="pt-20">
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/build-a-burger" element={<BuildABurger />} />
