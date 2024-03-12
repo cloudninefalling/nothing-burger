@@ -2,6 +2,7 @@ import { ReactElement, useState } from "react";
 import IngredientCarousel from "../IngredientCarousel/IngredientCarousel";
 import "./BurgerBuilder.css";
 import { sauces, veggies, eggsAndDairy, meat } from "../../utils/constants";
+import { TBurger } from "../../types/global";
 
 export default function BurgerBuilder() {
   const [burger, setBurger] = useState<TBurger>({
@@ -9,8 +10,6 @@ export default function BurgerBuilder() {
     ingredients: ["patty-beef"],
     bot: "bun-bot",
   });
-
-  console.log(burger);
 
   const [layerList, setLayerList] = useState<ReactElement[]>([
     <IngredientCarousel
@@ -21,41 +20,48 @@ export default function BurgerBuilder() {
     />,
   ]);
 
-  const buttons = () => (
+  const renderButtons = () => (
     // todo move to component
-    <div style={{ display: "flex" }}>
+    <div className="flex gap-3">
       <button
         type="button"
-        aria-label="add meat"
-        className={`burger-builder__button ${
-          layerList.length > 3 ? "burger-builder__button_disabled" : ""
+        className={`cursor-pointer rounded-md border-none bg-color-primary p-2 font-semibold capitalize transition-all ${
+          layerList.length > 3 ? "hidden" : ""
         }`}
         onClick={() => addLayer(meat)}
-      />
+      >
+        Add Meat
+      </button>
       <button
         type="button"
         aria-label="add veggies"
-        className={`burger-builder__button ${
-          layerList.length > 3 ? "burger-builder__button_disabled" : ""
+        className={`cursor-pointer rounded-md border-none bg-color-primary p-2 font-semibold capitalize transition-all ${
+          layerList.length > 3 ? "hidden" : ""
         }`}
         onClick={() => addLayer(veggies)}
-      />
+      >
+        Add Veggies
+      </button>
       <button
         type="button"
         aria-label="add eggs or dairy"
-        className={`burger-builder__button ${
-          layerList.length > 3 ? "burger-builder__button_disabled" : ""
+        className={`cursor-pointer rounded-md border-none bg-color-primary p-2 font-semibold capitalize transition-all ${
+          layerList.length > 3 ? "hidden" : ""
         }`}
         onClick={() => addLayer(eggsAndDairy)}
-      />
+      >
+        add eggs/dairy
+      </button>
       <button
         type="button"
         aria-label="add sauce"
-        className={`burger-builder__button ${
-          layerList.length > 3 ? "burger-builder__button_disabled" : ""
+        className={`cursor-pointer rounded-md border-none bg-color-primary p-2 font-semibold capitalize transition-all ${
+          layerList.length > 3 ? "hidden" : ""
         }`}
         onClick={() => addLayer(sauces)}
-      />
+      >
+        Add Sauces
+      </button>
     </div>
   );
 
@@ -67,8 +73,8 @@ export default function BurgerBuilder() {
           ingredients={type}
           pos="mid"
           setBurger={setBurger}
-        />
-      )
+        />,
+      ),
     );
   }
 
@@ -78,9 +84,14 @@ export default function BurgerBuilder() {
   };
 
   return (
-    <section className="burger-builder">
-      <h2>Build-a-Burger!</h2>
-      <form className="burger-builder__form" onSubmit={submitBurger}>
+    <section className="mt-32 flex flex-col items-center">
+      <h2 className="text-6xl font-bold uppercase italic text-color-primary">
+        Build-a-Burger!
+      </h2>
+      <form
+        className="mt-16 flex flex-col items-center gap-4"
+        onSubmit={submitBurger}
+      >
         <IngredientCarousel
           ingredients={["bun-top", "lettuce"]}
           pos="top"
@@ -92,12 +103,12 @@ export default function BurgerBuilder() {
           pos="bot"
           setBurger={setBurger}
         />
-        {buttons()}
+        {renderButtons()}
 
         <button type="submit">Add Burger</button>
       </form>
       <a
-        className="burger-builder__link"
+        className="mt-8 text-sm font-semibold transition-all hover:text-color-primary"
         href="http://www.freepik.com"
         target="_blank"
         referrerPolicy="no-referrer"

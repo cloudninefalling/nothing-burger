@@ -1,3 +1,12 @@
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  import React from "react"
+
+declare module "react" {
+  interface CSSProperties {
+    "--image-url"?: string | number;
+  }
+}
+
 type TUser = {
   username: string, 
   id?: number, 
@@ -24,7 +33,6 @@ type TIngredients = TIngredient[];
 
 type TIngredient =
   "bun-top" |
-  "bun-mid" |
   "bun-bot" |
   "patty-beef"|
   "patty-chicken"|

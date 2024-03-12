@@ -7,8 +7,10 @@ export default function Landing() {
   return (
     <>
       <Lead />
-      <About />
-      <BurgerPromo />
+      <div className="flex w-11/12 justify-center gap-2">
+        <About />
+        <BurgerPromo />
+      </div>
       <SignUpForm />
     </>
   );

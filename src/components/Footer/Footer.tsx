@@ -1,7 +1,6 @@
-import "./Footer.css";
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="mb-4 mt-auto flex flex-col items-center text-xl font-bold capitalize">
       <p className="footer__copyright">Дмитрий Шалыгин &copy; 2024</p>
     </footer>
   );

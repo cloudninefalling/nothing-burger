@@ -1,7 +1,6 @@
-import "./IngredientCarousel.css";
-
 import { ingredientsMap } from "../../utils/constants";
 import { useState } from "react";
+import { TBurger, TIngredients } from "../../types/global";
 
 type TProps = {
   ingredients: TIngredients;
@@ -43,20 +42,20 @@ export default function IngredientCarousel({
   };
 
   return (
-    <div className="ingredient-carousel">
+    <div className="mx-auto flex w-full justify-between gap-5">
       <button
-        className="ingredient-carousel__button ingredient-carousel__button_left"
+        className="hover:bg-color-secondary aspect-square w-12 cursor-pointer bg-color-primary transition-all"
         type="button"
         onClick={() => shiftCurrent(-1)}
       />
       <div
-        className="ingredient-carousel__item"
+        className="aspect-video w-1/2 bg-contain bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${ingredientsMap.get(ingredients[current])})`,
         }}
       />
       <button
-        className="ingredient-carousel__button ingredient-carousel__button_right"
+        className="hover:bg-color-secondary aspect-square w-12 cursor-pointer bg-color-primary transition-all"
         type="button"
         onClick={() => shiftCurrent(1)}
       />
