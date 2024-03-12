@@ -1,19 +1,19 @@
 import { ingredientsMap } from "../../utils/constants";
 import { useState } from "react";
-import { TBurger, TIngredients } from "../../types/global";
+import { TIngredients } from "../../types/global";
 
 type TProps = {
   ingredients: TIngredients;
-  pos: string;
-  setBurger: React.Dispatch<React.SetStateAction<TBurger>>;
+  // pos: string;
+  // setBurger: React.Dispatch<React.SetStateAction<TBurger>>;
 };
 
 // todo set up dif vers for sauces, patties, ingredients
 
 export default function IngredientCarousel({
   ingredients,
-  pos,
-  setBurger,
+  // pos,
+  // setBurger,
 }: TProps) {
   const [current, setCurrent] = useState(0);
 

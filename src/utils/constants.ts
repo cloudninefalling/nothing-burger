@@ -13,6 +13,7 @@ import tomatoes from "../assets/burger-parts/burger-tomatoes.png";
 import ketchup from "../assets/burger-parts/sauce-ketchup.png";
 import mayo from "../assets/burger-parts/sauce-mayo.png";
 import mustard from "../assets/burger-parts/sauce-mustard.png";
+import { TIngredient, TIngredients } from "../types/global";
 
 const ingredientsMap = new Map<TIngredient, string>([
   ["bun-top", bunTop], 

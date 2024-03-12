@@ -1,21 +1,21 @@
 import { ReactElement, useState } from "react";
 import IngredientCarousel from "../IngredientCarousel/IngredientCarousel";
 import { sauces, veggies, eggsAndDairy, meat } from "../../utils/constants";
-import { TBurger } from "../../types/global";
+// import { TBurger } from "../../types/global";
 
 export default function BurgerBuilder() {
-  const [burger, setBurger] = useState<TBurger>({
-    top: "bun-top",
-    ingredients: ["patty-beef"],
-    bot: "bun-bot",
-  });
+  // const [burger, setBurger] = useState<TBurger>({
+  //   top: "bun-top",
+  //   ingredients: ["patty-beef"],
+  //   bot: "bun-bot",
+  // });
 
   const [layerList, setLayerList] = useState<ReactElement[]>([
     <IngredientCarousel
       key={0}
       ingredients={meat}
-      pos="mid"
-      setBurger={setBurger}
+      // pos="mid"
+      // setBurger={setBurger}
     />,
   ]);
 
@@ -70,8 +70,8 @@ export default function BurgerBuilder() {
         <IngredientCarousel
           key={layerList.length}
           ingredients={type}
-          pos="mid"
-          setBurger={setBurger}
+          // pos="mid"
+          // setBurger={setBurger}
         />,
       ),
     );
@@ -79,7 +79,6 @@ export default function BurgerBuilder() {
 
   const submitBurger = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(burger);
   };
 
   return (
@@ -93,14 +92,14 @@ export default function BurgerBuilder() {
       >
         <IngredientCarousel
           ingredients={["bun-top", "lettuce"]}
-          pos="top"
-          setBurger={setBurger}
+          // pos="top"
+          // setBurger={setBurger}
         />
         {layerList}
         <IngredientCarousel
           ingredients={["bun-bot", "lettuce"]}
-          pos="bot"
-          setBurger={setBurger}
+          // pos="bot"
+          // setBurger={setBurger}
         />
         {renderButtons()}
 

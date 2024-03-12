@@ -6,11 +6,15 @@ import BuildABurger from "./pages/BuildABurger/BuildABurger";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      basename={
+        import.meta.env.PUBLIC_URL ? `${import.meta.env.PUBLIC_URL}` : "/"
+      }
+    >
       <Header />
       <main className="flex flex-col items-center pt-20">
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="" element={<Landing />} />
           <Route path="/build-a-burger" element={<BuildABurger />} />
         </Routes>
       </main>
@@ -18,5 +22,5 @@ function App() {
     </BrowserRouter>
   );
 }
-//todo <a href="http://www.freepik.com">Designed by pch.vector / Freepik</a> in burger-creator
+
 export default App;
