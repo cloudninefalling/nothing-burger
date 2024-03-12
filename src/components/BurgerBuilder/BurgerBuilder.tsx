@@ -1,6 +1,5 @@
 import { ReactElement, useState } from "react";
 import IngredientCarousel from "../IngredientCarousel/IngredientCarousel";
-import "./BurgerBuilder.css";
 import { sauces, veggies, eggsAndDairy, meat } from "../../utils/constants";
 import { TBurger } from "../../types/global";
 

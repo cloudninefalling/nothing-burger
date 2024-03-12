@@ -33,7 +33,7 @@ export default function BurgerPromo() {
   ));
 
   return (
-    <section className="px-15 bg-color-secondary flex w-2/5 flex-col items-center rounded-2xl py-8 text-color-text shadow-[inset_0_0px_5px_rgba(0,0,0,0.3)]">
+    <section className="px-15 bg-color-secondary flex w-2/5 flex-col items-center rounded-2xl py-8 text-color-text shadow-md">
       <p className="text-3xl font-semibold uppercase">Use your</p>
       <p
         style={{
@@ -46,7 +46,7 @@ export default function BurgerPromo() {
 
       <Link
         to={"/build-a-burger"}
-        className=" mt-6 flex w-[85%] flex-col overflow-hidden rounded-xl bg-color-background p-12 align-middle shadow-lg transition-all hover:w-[88%] hover:shadow-xl"
+        className=" mt-6 flex w-[85%] flex-col overflow-hidden rounded-xl bg-color-background p-12 align-middle shadow-md transition-all hover:w-[88%] hover:shadow-xl"
       >
         {textDivs}
       </Link>
