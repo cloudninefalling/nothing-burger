@@ -2,6 +2,9 @@
 
 URL: https://cloudninefalling.github.io/Nothing-Burger/
 
+![image](https://github.com/cloudninefalling/nothing-burger/assets/126521847/2349cf22-fc8b-4e45-9432-a8cf81a896ef)
+
+
 Nothing burger - это онлайн ресторан, в котором можно собрать собственный бургер, заказать обед с колой и насладиться атмосферой фастфуда прямо на экране.
 
 Проект в фазе разработки. Функциональность ограничена.
